@@ -1,0 +1,211 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "c688624cf67eb0d3454078da4f1560d4",
+    "entities": [
+      {
+        "tableName": "book",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `groupId` INTEGER, `type` INTEGER NOT NULL, `name` TEXT NOT NULL, `author` TEXT NOT NULL, `tag` TEXT, `cover` TEXT, `customCover` TEXT, `intro` TEXT, `customIntro` TEXT, `wordNum` TEXT, `chapterNum` INTEGER NOT NULL, `bookUrl` TEXT NOT NULL, `infoUrl` TEXT NOT NULL, `tocUrl` TEXT NOT NULL, `originName` TEXT NOT NULL, `curChapterIndex` INTEGER NOT NULL, `curChapterTitle` TEXT, `curCharacterPos` INTEGER NOT NULL, `latestChapterTitle` TEXT, `latestReadTime` INTEGER NOT NULL, `latestUpdateTime` INTEGER NOT NULL, `originOrder` INTEGER NOT NULL, `variable` TEXT, `markread` INTEGER NOT NULL, `syncTime` INTEGER NOT NULL, `reverseToc` INTEGER, `pageAnim` INTEGER, `reSegment` INTEGER, `imageStyle` TEXT, `useReplaceRule` INTEGER, `delTag` INTEGER, `ttsEngine` TEXT, `splitLongChapter` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "groupId",
+            "columnName": "groupId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "author",
+            "columnName": "author",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tag",
+            "columnName": "tag",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "cover",
+            "columnName": "cover",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "customCover",
+            "columnName": "customCover",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "intro",
+            "columnName": "intro",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "customIntro",
+            "columnName": "customIntro",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "wordNum",
+            "columnName": "wordNum",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "chapterNum",
+            "columnName": "chapterNum",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bookUrl",
+            "columnName": "bookUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "infoUrl",
+            "columnName": "infoUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tocUrl",
+            "columnName": "tocUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "originName",
+            "columnName": "originName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "curChapterIndex",
+            "columnName": "curChapterIndex",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "curChapterTitle",
+            "columnName": "curChapterTitle",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "curCharacterPos",
+            "columnName": "curCharacterPos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latestChapterTitle",
+            "columnName": "latestChapterTitle",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "latestReadTime",
+            "columnName": "latestReadTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latestUpdateTime",
+            "columnName": "latestUpdateTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "originOrder",
+            "columnName": "originOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variable",
+            "columnName": "variable",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "markread",
+            "columnName": "markread",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syncTime",
+            "columnName": "syncTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "readConfig.reverseToc",
+            "columnName": "reverseToc",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "readConfig.pageAnim",
+            "columnName": "pageAnim",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "readConfig.reSegment",
+            "columnName": "reSegment",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "readConfig.imageStyle",
+            "columnName": "imageStyle",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "readConfig.useReplaceRule",
+            "columnName": "useReplaceRule",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "readConfig.delTag",
+            "columnName": "delTag",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "readConfig.ttsEngine",
+            "columnName": "ttsEngine",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "readConfig.splitLongChapter",
+            "columnName": "splitLongChapter",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c688624cf67eb0d3454078da4f1560d4')"
+    ]
+  }
+}
